@@ -1,0 +1,24 @@
+<wxs src="./../../utils/format.wxs" module="format" />
+<scroll-view>
+    <view class='movieListContainer' wx:for="{{hotPlay.subjects}}" wx:key="index">
+        <view class='movieItem'>
+            <image class='movieImg' src='{{item.images.medium}}' lazy-load />
+            <view class='movieIntroduce'>
+                <text class='itemTitle'>{{item.title}}</text>
+                <view class='gradeContainer'>
+                    <image class='gradeImg' src='./../images/i_grade_foc.png' wx:for="{{format.integer(item.rating.average)}}" wx:key="index" />
+                    <image class='gradeImg' src='./../images/i_grade.png' wx:for="{{format.decimals(item.rating.average)}}" wx:key="index" />
+                    <text class='gradeNum'>{{format.toFix(item.rating.average, 1)}}</text>
+                </view>
+                <text class='director'>导演:  {{format.names(item.directors)}}</text>
+                <text class='cast'>主演:  {{format.names(item.casts)}}</text>
+            </view>
+            <view class='movieDetail'>
+                <text class='watch'>{{format.watchNum(item.collect_count)}}人看过</text>
+                <view class='detailContainer'>
+                    <text class='detailBtn'>查看</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</scroll-view>

@@ -1,0 +1,59 @@
+
+// 格式化小数
+function toFix(val, num) {
+    return parseFloat(val).toFixed(num);
+}
+
+// 姓名用'/'拼接
+function names(names) {
+    var str = '';
+    for (var i = 0; i < names.length; i++) {
+        if (i === names.length - 1) {
+            str += names[i].name
+        } else {
+            str += names[i].name + ' / '
+        }
+    }
+    return str;
+}
+
+// 格式化观影人数
+function watchNum(num) {
+    if (num < 10000) {
+        return num;
+    }
+    if (num < 100000000) {
+        return toFix(num / 10000, 1) + '万'
+    }else{
+        return toFix(num / 100000000, 1) + '亿'
+    }
+}
+
+// 返回整星循环次数的数组
+function integer(num) {
+    var len = parseInt(parseInt(num) / 2);
+    var arr = [];
+    for(var i = 0; i< len; i++){
+        arr.push(i);
+    }
+    return arr;
+}
+
+// 返回整星循环次数的数组
+function decimals(num) {
+    var len = 5 - parseInt(parseInt(num) / 2);
+    var arr = [];
+    for (var i = 0; i < len; i++) {
+        arr.push(i);
+    }
+    return arr;
+}
+
+// 导出模块
+module.exports = {
+    toFix: toFix,
+    names: names,
+    watchNum: watchNum,
+    integer: integer,
+    decimals: decimals
+};

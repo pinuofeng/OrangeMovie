@@ -1,0 +1,86 @@
+/* pages/hot_play/HotPlay.wxss */
+.movieListContainer {
+    padding: 30rpx;
+    border-bottom: 1px solid #eeeeee;
+}
+.movieItem {
+    flex-direction: row;
+    justify-content: space-between;
+}
+.movieImg {
+    width: 25%;
+    height: 240rpx; 
+    background-color: #eeeeee;
+}
+.movieIntroduce{
+    width: 55%;
+    justify-content: flex-start;
+    padding-left: 30rpx;
+    padding-right: 30rpx;
+}
+.itemTitle {
+    color: #333;
+    font-size: 35rpx;
+    font-weight: bold;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.gradeContainer {
+    flex-direction: row;
+    align-items: center;
+    margin-top: 5rpx;
+    margin-bottom: 5rpx;
+}
+.gradeImg {
+    width: 25rpx;
+    height: 25rpx;
+}
+.gradeNum {
+    color: #999;
+    font-size: 25rpx;
+    margin-left: 8rpx;
+}
+.director {
+    color: #999;
+    font-size: 22rpx;
+    line-height: 35rpx;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.cast {
+    display: -webkit-box;
+    height: 70rpx;
+    color: #999;
+    font-size: 22rpx;
+    line-height: 35rpx;
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.movieDetail {
+    width: 20%;
+    height: 240rpx;
+    justify-content: center;
+    align-items: center;
+}
+.watch {
+    font-size: 22rpx;
+    color: #ff3366;
+    margin-bottom: 20rpx;
+}
+.detailContainer {
+    width: 120rpx;
+    height: 55rpx;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ff3366;
+    border-radius: 7rpx;
+}
+.detailBtn {
+    font-size: 27rpx;
+    color: #ff3366;
+}
