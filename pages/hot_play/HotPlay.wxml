@@ -1,5 +1,5 @@
 <wxs src="./../../utils/format.wxs" module="format" />
-<scroll-view>
+<scroll-view class='scrollView'>
     <view class='movieListContainer' wx:for="{{hotPlay}}" wx:key="index">
         <view class='movieItem'>
             <image class='movieImg' src='{{item.images.medium}}' lazy-load />
@@ -16,9 +16,12 @@
             <view class='movieDetail'>
                 <text class='watch'>{{format.watchNum(item.collect_count)}}人看过</text>
                 <view class='detailContainer'>
-                    <text class='detailBtn'>查看</text>
+                    <text class='detailBtn'>详情</text>
                 </view>
             </view>
         </view>
+    </view>
+    <view wx:if='{{refreshing}}'>
+        <image src='./../images/i_loading.gif' class='loadingImg' />
     </view>
 </scroll-view>

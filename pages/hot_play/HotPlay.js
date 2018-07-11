@@ -4,7 +4,7 @@ var
     app = getApp(),
     start = 0, // 起始索引位置
     count = 10, // 每次查询数量
-    total = 0;
+    total = 0; // 总数
 
 Page({
 
@@ -13,6 +13,7 @@ Page({
    */
   data: {
     hotPlay: [],
+    refreshing: false
   },
 
   /**
@@ -23,12 +24,13 @@ Page({
   },
 
   // 请求热映数据
-  getHotPlayMovie: function(){
+  getHotPlayMovie: function (refreshing=false){
       if(start > total){return}
       let _this = this;
+      refreshing && this.setData({refreshing});
       wx.showNavigationBarLoading();
       wx.request({
-          url: `https://api.douban.com/v2/movie/in_theaters?apikey=${app.globalData.apiKey}=${wx.getStorageSync('city')}&start=${start}&count=${count}`,
+          url: `https://api.douban.com/v2/movie/in_theaters?apikey=${app.globalData.apiKey}&city=${wx.getStorageSync('city')}&start=${start}&count=${count}`,
           method: 'GET',
           header: {
               'Content-Type': 'application/x-www-form-urlencoded'
@@ -40,6 +42,9 @@ Page({
               });
               start += count;
               total = res.data.total;
+          },
+          complete: function () {
+              _this.setData({ refreshing: false });
           }
       })
   },
@@ -83,7 +88,7 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-      this.getHotPlayMovie();
+      this.getHotPlayMovie(true);
   },
 
   /**

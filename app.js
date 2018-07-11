@@ -8,7 +8,7 @@ function getLocation() {
             loadCity(res.longitude, res.latitude)
         },
         fail: function () {
-            wx.setStorageSync('北京市')
+            wx.setStorageSync('北京')
         }
     })
 }
@@ -30,7 +30,7 @@ function loadCity(longitude, latitude) {
 
 App({
     globalData: {
-        apiKey: '0b2bdeda43b5688921839c8ecb20399b&city',
+        apiKey: '0b2bdeda43b5688921839c8ecb20399b',
         bMapKey: 'ZoDAfZ1Ul7G74Myw8g8mLSPlfcVeBAel'
     },
     onLaunch: function() {

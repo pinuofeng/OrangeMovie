@@ -84,3 +84,10 @@
     font-size: 27rpx;
     color: #ff3366;
 }
+.loadingImg {
+    width: 40rpx;
+    height: 40rpx;
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+    align-self: center;
+}
