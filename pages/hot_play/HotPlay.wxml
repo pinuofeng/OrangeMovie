@@ -1,6 +1,6 @@
 <wxs src="./../../utils/format.wxs" module="format" />
 <scroll-view>
-    <view class='movieListContainer' wx:for="{{hotPlay.subjects}}" wx:key="index">
+    <view class='movieListContainer' wx:for="{{hotPlay}}" wx:key="index">
         <view class='movieItem'>
             <image class='movieImg' src='{{item.images.medium}}' lazy-load />
             <view class='movieIntroduce'>
