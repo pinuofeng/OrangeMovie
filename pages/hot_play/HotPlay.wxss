@@ -1,7 +1,7 @@
 /* pages/hot_play/HotPlay.wxss */
-.movieListContainer {
+.movieContainer {
     padding: 30rpx;
-    border-bottom: 1px solid #eeeeee;
+    border-bottom: .5px solid #ccc;
 }
 .movieItem {
     flex-direction: row;
@@ -19,7 +19,7 @@
     padding-right: 30rpx;
 }
 .itemTitle {
-    color: #333;
+    color: #444;
     font-size: 35rpx;
     font-weight: bold;
     overflow: hidden;

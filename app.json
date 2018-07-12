@@ -1,38 +1,39 @@
 {
-  "pages": [
-    "pages/hot_play/HotPlay",
-    "pages/find/find",
-    "pages/ranking/ranking"
-  ],
-  "window": {
-    "navigationBarBackgroundColor": "white",
-    "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "橙子电影",
-    "backgroundTextStyle": "light"
-  },
-  "tabBar": {
-    "list": [
-      {
-        "pagePath": "pages/hot_play/HotPlay",
-        "text": "热映",
-        "iconPath": "pages/images/i_hot_play.png",
-        "selectedIconPath": "pages/images/i_hot_play_foc.png"
-      },
-      {
-        "pagePath": "pages/find/find",
-        "text": "找片",
-        "iconPath": "pages/images/i_find.png",
-        "selectedIconPath": "pages/images/i_find_foc.png"
-      },
-      {
-        "pagePath": "pages/ranking/ranking",
-        "text": "排行",
-        "iconPath": "pages/images/i_ranking.png",
-        "selectedIconPath": "pages/images/i_ranking_foc.png"
-      }
+    "pages": [
+        "pages/hot_play/HotPlay",
+        "pages/find/Find",
+        "pages/ranking/Ranking",
+        "pages/movie_detail/MovieDetail"
     ],
-    "color": "#818181",
-    "selectedColor": "#FF9933"
-  },
-  "debug": true
+    "window": {
+        "navigationBarBackgroundColor": "white",
+        "navigationBarTextStyle": "black",
+        "navigationBarTitleText": "橙子电影",
+        "backgroundTextStyle": "light"
+    },
+    "tabBar": {
+        "list": [
+            {
+                "pagePath": "pages/hot_play/HotPlay",
+                "text": "热映",
+                "iconPath": "pages/images/i_hot_play.png",
+                "selectedIconPath": "pages/images/i_hot_play_foc.png"
+            },
+            {
+                "pagePath": "pages/find/Find",
+                "text": "找片",
+                "iconPath": "pages/images/i_find.png",
+                "selectedIconPath": "pages/images/i_find_foc.png"
+            },
+            {
+                "pagePath": "pages/ranking/Ranking",
+                "text": "排行",
+                "iconPath": "pages/images/i_ranking.png",
+                "selectedIconPath": "pages/images/i_ranking_foc.png"
+            }
+        ],
+        "color": "#818181",
+        "selectedColor": "#FF9933"
+    },
+    "debug": true
 }

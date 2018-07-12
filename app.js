@@ -30,6 +30,7 @@ function loadCity(longitude, latitude) {
 
 App({
     globalData: {
+        baseURL: 'https://api.douban.com',
         apiKey: '0b2bdeda43b5688921839c8ecb20399b',
         bMapKey: 'ZoDAfZ1Ul7G74Myw8g8mLSPlfcVeBAel'
     },

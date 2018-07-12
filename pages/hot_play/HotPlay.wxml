@@ -1,13 +1,13 @@
 <wxs src="./../../utils/format.wxs" module="format" />
-<scroll-view class='scrollView'>
-    <view class='movieListContainer' wx:for="{{hotPlay}}" wx:key="index">
+<view>
+    <view class='movieContainer' wx:for="{{hotPlay}}" wx:key="{{index}}" data-id='{{item.id}}' bindtap="movieClick">
         <view class='movieItem'>
             <image class='movieImg' src='{{item.images.medium}}' lazy-load />
             <view class='movieIntroduce'>
                 <text class='itemTitle'>{{item.title}}</text>
                 <view class='gradeContainer'>
-                    <image class='gradeImg' src='./../images/i_grade_foc.png' wx:for="{{format.integer(item.rating.average)}}" wx:key="index" />
-                    <image class='gradeImg' src='./../images/i_grade.png' wx:for="{{format.decimals(item.rating.average)}}" wx:key="index" />
+                    <image class='gradeImg' src='./../images/i_grade_foc.png' wx:for="{{format.integer(item.rating.average)}}" wx:key="{{index}}" />
+                    <image class='gradeImg' src='./../images/i_grade.png' wx:for="{{format.decimals(item.rating.average)}}" wx:key="{{index}}" />
                     <text class='gradeNum'>{{format.toFix(item.rating.average, 1)}}</text>
                 </view>
                 <text class='director'>导演:  {{format.names(item.directors)}}</text>
@@ -24,4 +24,4 @@
     <view wx:if='{{refreshing}}'>
         <image src='./../images/i_loading.gif' class='loadingImg' />
     </view>
-</scroll-view>
+</view>

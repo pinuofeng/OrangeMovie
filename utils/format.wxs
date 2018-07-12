@@ -49,11 +49,30 @@ function decimals(num) {
     return arr;
 }
 
+// 格式化电影信息（年份/上映地点/类型）
+function movieInfo(countries = [], genres = []) {
+    return ' / ' + countries.concat(genres).join(' / ');
+}
+
+//格式化剧情简介（展开/收起）
+function dramaContent(content = '', isShowAll = false) {
+    if (isShowAll) {
+        return content;
+    } else {
+        if (content.length <= 85){
+            return content;
+        }
+        return content.substring(0, 85) + '...';
+    }
+}
+
 // 导出模块
 module.exports = {
     toFix: toFix,
     names: names,
     watchNum: watchNum,
     integer: integer,
-    decimals: decimals
+    decimals: decimals,
+    movieInfo: movieInfo,
+    dramaContent: dramaContent
 };

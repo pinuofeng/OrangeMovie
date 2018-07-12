@@ -30,7 +30,7 @@ Page({
       refreshing && this.setData({refreshing});
       wx.showNavigationBarLoading();
       wx.request({
-          url: `https://api.douban.com/v2/movie/in_theaters?apikey=${app.globalData.apiKey}&city=${wx.getStorageSync('city')}&start=${start}&count=${count}`,
+          url: `${app.globalData.baseURL}/v2/movie/in_theaters?apikey=${app.globalData.apiKey}&city=${wx.getStorageSync('city')}&start=${start}&count=${count}`,
           method: 'GET',
           header: {
               'Content-Type': 'application/x-www-form-urlencoded'
@@ -96,6 +96,13 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+
+  movieClick: function (e) {
+      let id = e.currentTarget.dataset.id;
+      wx.navigateTo({
+          url: `../movie_detail/MovieDetail?id=${id}`
+      })
   }
 
 })

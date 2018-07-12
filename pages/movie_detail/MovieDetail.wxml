@@ -1,0 +1,94 @@
+<!--pages/movie_detail/MovieDetail.wxml-->
+<wxs src="./../../utils/format.wxs" module="format" />
+<view>
+
+    <view class='headContainer'>
+        <image src="{{movieDetail.images.medium}}" class='mainImg' />
+    </view>
+
+    <view class='bodyContainer'>
+        <!-- 标题/介绍/评分 -->
+        <view class='movieInfo'>
+
+            <view class='movieIntroduce'>
+                <text class='movieTitle'>{{movieDetail.title}}</text>
+                <text class='movieDetailInfo'>
+                    {{movieDetail.year}}{{ format.movieInfo(movieDetail.countries, movieDetail.genres) }}
+                </text>
+                <text class='movieDetailInfo'>
+                    上映时间: {{movieDetail.pubdate}}
+                </text>
+                <text class='movieDetailInfo'>
+                    片长: {{movieDetail.durations[0]}}
+                </text>
+            </view>
+
+            <view class='movieGrade'>
+                <view class='gradeContainer'>
+                    <text class='movieDetailInfo' style='color: #ccc;font-weight: bold; font-size: 20rpx;'>橙子评分</text>
+                    <text class='gradeNum'>{{movieDetail.rating.average}}</text>
+                    <view class='gradeImgContainer'>
+                        <image class='gradeImg' src='./../images/i_grade_foc.png' wx:for="{{format.integer(movieDetail.rating.average)}}" wx:key="{{index}}" />
+                        <image class='gradeImg' src='./../images/i_grade.png' wx:for="{{format.decimals(movieDetail.rating.average)}}" wx:key="{{index}}" />
+                    </view>
+                    <text class='movieDetailInfo'>{{movieDetail.ratings_count}}人</text>
+                </view>
+            </view>
+
+        </view>
+
+        <!-- 剧情简介 -->
+        <view class='blockContainer'>
+            <text class='blockTitle'>剧情简介</text>
+            <text class='dramaContent' bindtap="dramaTap">{{unfoldDrama? format.dramaContent(movieDetail.summary ,true): format.dramaContent(movieDetail.summary)}}<text wx:if="{{!unfoldDrama}}" class='unfoldText'>展开</text>
+            </text>
+        </view>
+
+        <!-- 影人 -->
+        <view class='blockContainer'>
+            <text class='blockTitle'>影人</text>
+            <scroll-view scroll-x class='horScrollView'>
+                <view class='horScrollviewItem'>
+                    <block wx:for="{{movieDetail.directors}}" wx:key="{{item.id}}">
+                        <view class='horScrollviewItem'>
+                            <image class='horScrollViewImg' src="{{item.avatars.medium}}" />
+                            <view class='celebrityContainer'>
+                                <text class='celebrityName' style='max-width: 180rpx;'>{{item.name}}<text class='movieDetailInfo'>(导演)</text></text>
+                            </view>
+                        </view>
+                    </block>
+                    <block wx:for="{{movieDetail.casts}}" wx:key="{{item.id}}">
+                        <view class='horScrollviewItem'>
+                            <image class='horScrollViewImg' src="{{item.avatars.medium}}" />
+                            <view class='celebrityContainer'>
+                                <text class='celebrityName'>{{item.name}}</text>
+                            </view>
+                        </view>
+                    </block>
+                </view>
+            </scroll-view>
+        </view>
+
+        <!-- 预告片 / 剧照 -->
+        <view class='blockContainer'>
+            <text class='blockTitle'>预告片/剧照</text>
+            <scroll-view scroll-x class='horScrollView'>
+                <view class='horScrollviewItem'>
+                    <block wx:for="{{movieDetail.photos}}" wx:key="{{item.id}}">
+                        <view class='horScrollviewItem'>
+                            <image class='stillImg' src="{{item.cover}}" />
+                        </view>
+                    </block>
+                </view>
+            </scroll-view>
+        </view>
+
+        <!-- 评论 -->
+        <view class='blockContainer'>
+            <text class='blockTitle'>评论</text>
+            
+
+        </view>
+    </view>
+
+</view>

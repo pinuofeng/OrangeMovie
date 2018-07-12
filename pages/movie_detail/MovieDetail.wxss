@@ -1,0 +1,131 @@
+/* pages/movie_detail/MovieDetail.wxss */
+
+.headContainer {
+    background-color: #630;
+}
+
+.mainImg {
+    width: 400rpx;
+    height: 550rpx;
+    margin-top: 30rpx;
+    margin-bottom: 30rpx;
+    align-self: center;
+    box-shadow: 0px 0px 15px #000;
+}
+
+.bodyContainer {
+    padding: 30rpx;
+}
+
+.movieInfo {
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 0.5px solid #ccc;
+}
+
+.movieIntroduce {
+    width: 70%;
+    height: 250rpx;
+}
+
+.movieTitle {
+    color: #444;
+    font-size: 45rpx;
+    font-weight: bold;
+    line-height: 55rpx;
+}
+
+.movieDetailInfo {
+    color: #999;
+    font-size: 22rpx;
+    line-height: 20rpx;
+}
+
+.movieGrade {
+    width: 30%;
+    height: 250rpx;
+    align-items: flex-end;
+}
+
+.gradeContainer {
+    width: 180rpx;
+    height: 180rpx;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 6px #ccc;
+}
+
+.gradeNum {
+    color: #333;
+    font-size: 45rpx;
+    font-weight: bold;
+}
+
+.gradeImgContainer {
+    flex-direction: row;
+    height: 25rpx;
+    margin-bottom: 5rpx;
+}
+
+.gradeImg {
+    width: 25rpx;
+    height: 25rpx;
+}
+
+.blockContainer {
+    margin-bottom: 20rpx;
+}
+
+.blockTitle {
+    color: #999;
+    font-size: 27rpx;
+    margin-bottom: 20rpx;
+    margin-top: 30rpx;
+}
+
+.dramaContent {
+    color: #555;
+    font-size: 28rpx;
+}
+
+.unfoldText {
+    color: #3c3;
+    margin-left: 10rpx;
+}
+
+.horScrollView {
+    width: 100%;
+    white-space: nowrap;
+}
+
+.horScrollviewItem {
+    display: inline-block;
+    text-align: center;
+}
+
+.horScrollViewImg {
+    width: 180rpx;
+    height: 250rpx;
+    margin-right: 10rpx;
+    margin-bottom: 5rpx;
+    display: block;
+}
+
+.celebrityContainer {
+    display: block;
+    width: 180rpx;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.celebrityName {
+    color: #555;
+    font-size: 26rpx;
+}
+
+.stillImg {
+    width: 420rpx;
+    height: 350rpx;
+    margin-right: 10rpx;
+}
