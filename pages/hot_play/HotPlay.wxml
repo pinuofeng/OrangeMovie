@@ -21,7 +21,7 @@
             </view>
         </view>
     </view>
-    <view wx:if='{{refreshing}}'>
+    <view wx:if='{{loading}}'>
         <image src='./../images/i_loading.gif' class='loadingImg' />
     </view>
 </view>

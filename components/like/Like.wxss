@@ -1,0 +1,21 @@
+/* components/like/Like.wxss */
+
+.likeContainer {
+    flex-direction: row;
+    align-items: flex-end;
+}
+.likeImg {
+    width: 35rpx;
+    height: 35rpx;
+    margin-right: 5rpx;
+}
+.likeNum {
+    color: #ccc;
+    font-size: 25rpx;
+    line-height: 30rpx;
+}
+.likeNumFoc {
+    color: #FF9933;
+    font-size: 25rpx;
+    line-height: 30rpx;
+}

@@ -1,5 +1,8 @@
 {
     "navigationBarTitleText": "电影",
     "navigationBarBackgroundColor": "#663300",
-    "navigationBarTextStyle": "white"
+    "navigationBarTextStyle": "white",
+    "usingComponents": {
+        "like": "/components/like/Like"
+    }
 }

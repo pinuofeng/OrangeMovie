@@ -39,11 +39,29 @@ function integer(num) {
     return arr;
 }
 
-// 返回整星循环次数的数组
+// 返回剩余星循环次数的数组
 function decimals(num) {
     var len = 5 - parseInt(parseInt(num) / 2);
     var arr = [];
     for (var i = 0; i < len; i++) {
+        arr.push(i);
+    }
+    return arr;
+}
+
+// 返回评论星循环次数
+function commentNum (num) {
+    var arr = [];
+    for (var i = 0; i < num; i++) {
+        arr.push(i);
+    }
+    return arr;
+}
+
+// 返回评论剩余星循环次数
+function commentUnNum(num) {
+    var arr = [];
+    for (var i = 0; i < 5-num; i++) {
         arr.push(i);
     }
     return arr;
@@ -74,5 +92,7 @@ module.exports = {
     integer: integer,
     decimals: decimals,
     movieInfo: movieInfo,
-    dramaContent: dramaContent
+    dramaContent: dramaContent,
+    commentNum: commentNum,
+    commentUnNum: commentUnNum
 };

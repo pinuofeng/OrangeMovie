@@ -1,0 +1,6 @@
+<!--components/like/Like.wxml-->
+<view class="likeContainer" bindtap='_handerClick'>
+    <image class="likeImg" src="{{isLike?'/pages/images/i_like_foc.png':'/pages/images/i_like.png'}}" />
+    <text class="{{isLike?'likeNumFoc':'likeNum'}}">{{likeCount}}</text>
+</view>
+

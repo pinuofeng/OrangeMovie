@@ -129,3 +129,69 @@
     height: 350rpx;
     margin-right: 10rpx;
 }
+
+.shortComment {
+    color: #555;
+    font-size: 35rpx;
+    margin-top: 20rpx;
+    margin-bottom: 50rpx;
+}
+
+.commentItem {
+    margin-bottom: 50rpx;
+}
+
+.commentTop {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.commentUserImg {
+    width: 60rpx;
+    height: 60rpx;
+    border-radius: 30rpx;
+    margin-right: 20rpx;
+}
+
+.commentUserNick {
+    color: #444;
+    font-size: 28rpx;
+    font-weight: bold;
+    margin-right: 15rpx;
+}
+
+.likeContainer {
+    flex-direction: row;
+    align-items: center;
+}
+
+.commentCenter {
+    margin-left: 80rpx;
+}
+
+.commentContent {
+    color: #555;
+    font-size: 30rpx;
+}
+
+.commentTime {
+    color: #ccc;
+    font-size: 25rpx;
+    margin-left: 80rpx;
+    margin-top: 5rpx;
+}
+
+.loadImgContainer {
+    margin-top: -50rpx;
+    border-top: 0.5px solid #ccc;
+    padding-bottom: 20rpx;
+}
+
+.loadingImg {
+    width: 40rpx;
+    height: 40rpx;
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+    align-self: center;
+}

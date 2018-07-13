@@ -13,7 +13,7 @@ Page({
    */
   data: {
     hotPlay: [],
-    refreshing: false
+    loading: false
   },
 
   /**
@@ -24,10 +24,10 @@ Page({
   },
 
   // 请求热映数据
-  getHotPlayMovie: function (refreshing=false){
+  getHotPlayMovie: function (loading=false){
       if(start > total){return}
       let _this = this;
-      refreshing && this.setData({refreshing});
+      loading && this.setData({loading});
       wx.showNavigationBarLoading();
       wx.request({
           url: `${app.globalData.baseURL}/v2/movie/in_theaters?apikey=${app.globalData.apiKey}&city=${wx.getStorageSync('city')}&start=${start}&count=${count}`,
@@ -44,7 +44,7 @@ Page({
               total = res.data.total;
           },
           complete: function () {
-              _this.setData({ refreshing: false });
+              _this.setData({ loading: false });
           }
       })
   },

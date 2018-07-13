@@ -40,7 +40,7 @@
         <!-- 剧情简介 -->
         <view class='blockContainer'>
             <text class='blockTitle'>剧情简介</text>
-            <text class='dramaContent' bindtap="dramaTap">{{unfoldDrama? format.dramaContent(movieDetail.summary ,true): format.dramaContent(movieDetail.summary)}}<text wx:if="{{!unfoldDrama}}" class='unfoldText'>展开</text>
+            <text class='dramaContent' bindtap="dramaTap">{{unfoldDrama? format.dramaContent(movieDetail.summary ,true): format.dramaContent(movieDetail.summary)}}<text wx:if="{{!unfoldDrama && movieDetail.summary.length > 85}}" class='unfoldText'>展开</text>
             </text>
         </view>
 
@@ -85,10 +85,32 @@
 
         <!-- 评论 -->
         <view class='blockContainer'>
-            <text class='blockTitle'>评论</text>
-            
+            <text class='shortComment'>评论</text>
 
+            <view class='commentItem' wx:for='{{commentList}}' wx:key='{{index}}'>
+                <view class='commentTop'>
+                    <view style='flex-direction: row; align-items: center;'>
+                        <image class='commentUserImg' src="{{item.author.avatar}}" />
+                        <text class='commentUserNick'>{{item.author.name}}</text>
+                        <image class='gradeImg' src='./../images/i_grade_foc.png' wx:for="{{format.commentNum(item.rating.value)}}" wx:key="{{index}}" />
+                        <image class='gradeImg' src='./../images/i_grade.png' wx:for="{{format.commentUnNum(item.rating.value)}}" wx:key="{{index}}" />
+                    </view>
+                    <view class='likeContainer'>
+                        <like likeNum='{{item.useful_count}}'></like>
+                    </view>
+                </view>
+                <view class='commentCenter'>
+                    <text class='commentContent'>{{item.content}}</text>
+                </view>
+                <text class='commentTime'>{{item.created_at}}</text>
+            </view>
         </view>
+
+    </view>
+
+    <!-- 正在加载 -->
+    <view class='loadImgContainer' wx:if='{{loading}}'>
+        <image src='./../images/i_loading.gif' class='loadingImg' />
     </view>
 
 </view>
