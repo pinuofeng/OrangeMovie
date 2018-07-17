@@ -1,2 +1,28 @@
 <!--pages/ranking/ranking.wxml-->
-<text>pages/ranking/ranking.wxml</text>
+<wxs src="./../../utils/format.wxs" module="format" />
+<view class='rankingContainer'>
+
+    <view class='rankingItem' wx:for="{{movies}}" wx:key="{{item.id}}" data-id='{{item.id}}' bindtap="openMovieDetail">
+        <view class='rankingNumContainer'>
+            <text class='line'>——————</text>
+            <text class='{{format.rankingNumStyle(index)}}'>{{index+1}}</text>
+            <text class='line'>——————</text>
+        </view>
+        <view class='movieContainer'>
+            <image class='movieImg' src='{{item.images.medium}}' lazy-load />
+            <view class='movieIntroduce'>
+                <text class='itemTitle'>{{item.title}}</text>
+                <view class='gradeContainer'>
+                    <image class='gradeImg' src='./../images/i_grade_foc.png' wx:for="{{format.integer(item.rating.average)}}" wx:key="{{index}}" />
+                    <image class='gradeImg' src='./../images/i_grade.png' wx:for="{{format.decimals(item.rating.average)}}" wx:key="{{index}}" />
+                    <text class='gradeNum'>{{format.toFix(item.rating.average, 1)}}</text>
+                </view>
+                <text class='director'>导演:  {{format.names(item.directors)}}</text>
+                <text class='cast'>主演:  {{format.names(item.casts)}}</text>
+            </view>
+        </view>
+    </view>
+    <view wx:if='{{loading}}'>
+        <image src='./../images/i_loading.gif' class='loadingImg' />
+    </view>
+</view>

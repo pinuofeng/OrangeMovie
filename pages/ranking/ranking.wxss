@@ -1,1 +1,132 @@
 /* pages/ranking/ranking.wxss */
+
+.rankingContainer {
+    padding-left: 30rpx;
+    padding-right: 30rpx;
+}
+
+.rankingItem {
+    align-items: center;
+    padding-bottom: 70rpx;
+    border-bottom: 0.5px solid #ccc;
+}
+
+.rankingNumContainer {
+    flex-direction: row;
+    align-items: center;
+    margin-top: 50rpx;
+    margin-bottom: 50rpx;
+}
+
+.number {
+    color: #999;
+    font-style: oblique;
+    font-weight: bold;
+    font-size: 35rpx;
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+    margin-left: 25rpx;
+    margin-right: 25rpx;
+}
+
+.one {
+    font-size: 40rpx;
+    color: #ff0000;
+}
+
+.two {
+    font-size: 40rpx;
+    color: #ff9900;
+}
+
+.three {
+    font-size: 40rpx;
+    color: #ffcc66;
+}
+
+.line {
+    color: #ccc;
+    font-size: 20rpx;
+}
+
+.movieContainer {
+    flex-direction: row;
+    width: 600rpx;
+    height: 300rpx;
+    border: 1px solid rgba(169, 169, 169, 0.4);
+    border-radius: 4rpx;
+    box-shadow: 0rpx 3px 10px rgba(220, 220, 220, 0.3);
+    padding: 30rpx;
+}
+
+.movieImg {
+    width: 200rpx;
+    height: 220rpx;
+    border-radius: 8rpx;
+    background-color: #eee;
+}
+
+.movieIntroduce {
+    width: 520rpx;
+    padding-left: 30rpx;
+    padding-right: 30rpx;
+}
+
+.itemTitle {
+    color: #444;
+    font-size: 35rpx;
+    font-weight: bold;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.gradeContainer {
+    height: 25rpx;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 8rpx;
+    margin-bottom: 8rpx;
+}
+
+.gradeImg {
+    width: 25rpx;
+    height: 25rpx;
+}
+
+.gradeNum {
+    color: #999;
+    font-size: 25rpx;
+    margin-left: 8rpx;
+}
+
+.director {
+    color: #999;
+    font-size: 22rpx;
+    line-height: 35rpx;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-top: 3rpx;
+    margin-bottom: 4rpx;
+}
+
+.cast {
+    display: -webkit-box;
+    height: 70rpx;
+    color: #999;
+    font-size: 22rpx;
+    line-height: 35rpx;
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.loadingImg {
+    width: 40rpx;
+    height: 40rpx;
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+    align-self: center;
+}

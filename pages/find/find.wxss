@@ -138,6 +138,8 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    margin-top: 3rpx;
+    margin-bottom: 4rpx;
 }
 .cast {
     display: -webkit-box;

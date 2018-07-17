@@ -96,6 +96,20 @@ function selectIcon(index) {
     }
 }
 
+// 排行数字
+function rankingNumStyle(index) {
+    switch (index) {
+        case 0:
+            return 'number one';
+        case 1:
+            return 'number two';
+        case 2:
+            return 'number three';
+        default:
+            return 'number';
+    }
+}
+
 // 导出模块
 module.exports = {
     toFix: toFix,
@@ -107,5 +121,6 @@ module.exports = {
     dramaContent: dramaContent,
     commentNum: commentNum,
     commentUnNum: commentUnNum,
-    selectIcon: selectIcon
+    selectIcon: selectIcon,
+    rankingNumStyle: rankingNumStyle
 };

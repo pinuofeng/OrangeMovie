@@ -36,7 +36,6 @@ Page({
               'Content-Type': 'application/x-www-form-urlencoded'
           },
           success: function (res) {
-              wx.hideNavigationBarLoading();
               _this.setData({
                   hotPlay: [..._this.data.hotPlay, ...res.data.subjects]
               });
@@ -50,6 +49,7 @@ Page({
               
           },
           complete: function () {
+              wx.hideNavigationBarLoading();
               _this.setData({ loading: false });
           }
       })
