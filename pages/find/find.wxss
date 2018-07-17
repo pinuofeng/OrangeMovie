@@ -1,1 +1,160 @@
 /* pages/find/find.wxss */
+
+.searchContainer {   
+    padding-left: 15rpx;
+    padding-right: 15rpx;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10rpx;
+    margin-bottom: 30rpx;
+}
+
+.inputContainer {
+    flex: 1;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 10rpx;
+    padding: 10rpx;
+    background-color: rgba(220, 220, 220, .4);
+} 
+
+.searchImg {
+    width: 35rpx;
+    height: 35rpx;
+    margin-right: 10rpx;
+}
+
+.searchInput {
+    flex: 1;
+    font-size: 30rpx;
+    color: #444;
+}
+
+.cleanBtn {
+    width: 35rpx;
+    height: 35rpx;
+    margin-left: 10rpx;
+}
+
+.placeholder {
+    color: #ccc;
+    font-size: 30rpx;
+}
+
+.searchBtn {
+    color: #3c3;
+    margin-left: 20rpx;
+    margin-right: 20rpx;
+}
+
+
+.hotSearchContainer {
+    border-top: .5px solid #dcdcdc;
+}
+
+.hotTitle {
+    color: #999;
+    font-size: 28rpx;
+    padding-left: 20rpx;
+    padding-top: 15rpx;
+    padding-bottom: 15rpx;
+    background-color: rgba(	245,245,245,.5);
+}
+
+.hotItem {
+    height: 90rpx;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 25rpx;
+    border-bottom: .5px solid #dcdcdc;    
+}
+
+.hotImg {
+    width: 50rpx;
+    height: 50rpx;
+    margin-right: 10rpx; 
+    margin-left: -10rpx;
+}
+
+.hotNum {
+    color: #ccc;
+    font-size: 25rpx;
+    margin-right: 30rpx; 
+    margin-left: 8rpx;
+
+}
+
+.hotName{
+    font-size: 28rpx;
+    color: #444;
+}
+
+
+.movieContainer {
+    padding: 30rpx;
+    border-bottom: .5px solid #ccc;
+}
+
+.movieItem {
+    flex-direction: row;
+}
+.movieImg {
+    width: 180rpx;
+    height: 240rpx; 
+    background-color: #eeeeee;
+}
+.movieIntroduce{
+    width: 520rpx;
+    padding-left: 30rpx;
+    padding-right: 30rpx;
+}
+.itemTitle {
+    color: #444;
+    font-size: 35rpx;
+    font-weight: bold;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.gradeContainer {
+    flex-direction: row;
+    align-items: center;
+    margin-top: 5rpx;
+    margin-bottom: 5rpx;
+}
+.gradeImg {
+    width: 25rpx;
+    height: 25rpx;
+}
+.gradeNum {
+    color: #999;
+    font-size: 25rpx;
+    margin-left: 8rpx;
+}
+.director {
+    color: #999;
+    font-size: 22rpx;
+    line-height: 35rpx;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.cast {
+    display: -webkit-box;
+    height: 70rpx;
+    color: #999;
+    font-size: 22rpx;
+    line-height: 35rpx;
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.loadingImg {
+    width: 40rpx;
+    height: 40rpx;
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+    align-self: center;
+}

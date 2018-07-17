@@ -8,7 +8,7 @@ function getLocation() {
             loadCity(res.longitude, res.latitude)
         },
         fail: function () {
-            wx.setStorageSync('北京')
+            wx.setStorageSync('city', '北京');
         }
     })
 }

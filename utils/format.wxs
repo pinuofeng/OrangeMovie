@@ -72,7 +72,7 @@ function movieInfo(countries = [], genres = []) {
     return ' / ' + countries.concat(genres).join(' / ');
 }
 
-//格式化剧情简介（展开/收起）
+// 格式化剧情简介（展开/收起）
 function dramaContent(content = '', isShowAll = false) {
     if (isShowAll) {
         return content;
@@ -81,6 +81,18 @@ function dramaContent(content = '', isShowAll = false) {
             return content;
         }
         return content.substring(0, 85) + '...';
+    }
+}
+
+// 热门图标
+function selectIcon(index) {
+    switch (index){
+        case 0: 
+            return '/pages/images/i_first.png';
+        case 1:
+            return '/pages/images/i_second.png';
+        case 2:
+            return '/pages/images/i_thirdly.png';
     }
 }
 
@@ -94,5 +106,6 @@ module.exports = {
     movieInfo: movieInfo,
     dramaContent: dramaContent,
     commentNum: commentNum,
-    commentUnNum: commentUnNum
+    commentUnNum: commentUnNum,
+    selectIcon: selectIcon
 };

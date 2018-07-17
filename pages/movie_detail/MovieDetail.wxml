@@ -87,7 +87,7 @@
         <view class='blockContainer'>
             <text class='shortComment'>评论</text>
 
-            <view class='commentItem' wx:for='{{commentList}}' wx:key='{{index}}'>
+            <view class='commentItem' wx:for='{{commentList}}' wx:key='{{item.author.uid}}'>
                 <view class='commentTop'>
                     <view style='flex-direction: row; align-items: center;'>
                         <image class='commentUserImg' src="{{item.author.avatar}}" />

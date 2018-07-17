@@ -42,6 +42,12 @@ Page({
               });
               start += count;
               total = res.data.total;
+              
+              // 缓存数据
+              start === 10 && wx.setStorageSync('hotMovies', _this.data.hotPlay.map(item => {
+                  return { id: item.id, title: item.title }
+              }));
+              
           },
           complete: function () {
               _this.setData({ loading: false });

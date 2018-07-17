@@ -39,8 +39,12 @@ Page({
             },
             success: function(res) {
                 wx.hideNavigationBarLoading();
+                let data = res.data;
+                if (data.summary.substr(data.summary.length - 3) === '©豆瓣'){
+                    data.summary = data.summary.substr(0, data.summary.length - 3);
+                }
                 _this.setData({
-                    movieDetail: res.data
+                    movieDetail: data
                 });
             }
         })

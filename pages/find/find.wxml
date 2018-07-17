@@ -1,2 +1,55 @@
 <!--pages/find/find.wxml-->
-<text>pages/find/find.wxml</text>
+<wxs src="./../../utils/format.wxs" module="format" />
+<!-- 头部搜索框 -->
+<view class='searchContainer'>
+    <view class='inputContainer' bindtap='getFocus'>
+        <image class='searchImg' src='../images/i_search.png' />
+        <input 
+            class='searchInput' 
+            value='{{inputVal}}'
+            focus="{{isFocus}}" 
+            bindinput="inputChange" 
+            placeholder="搜索电影/电视剧/演员" 
+            placeholder-class="placeholder" 
+            confirm-type="search" 
+            bindfocus="inputFocus"
+            bindblur='inputBlur'
+            bindconfirm="commitSearch" 
+        />
+        <image wx:if="{{isFocus && inputVal !== ''}}" bindtap='clearText' class='cleanBtn' src='../images/i_clear.png' />
+    </view>
+    <text class='searchBtn' bindtap='commitSearch'>搜索</text>
+</view>
+
+<!-- 热门搜索块 -->
+<view wx:if="{{!showResult && hotMovies.length > 0}}" class='hotSearchContainer'>
+    <text class='hotTitle'>热门搜索</text>
+    <view class='hotItem' wx:for="{{hotMovies}}" wx:key="{{item.id}}" data-id="{{item.id}}" bindtap="openMovieDetail">
+        <image wx:if="{{index < 3}}" class='hotImg' src='{{format.selectIcon(index)}}' />
+        <text wx:if="{{index >= 3}}" class='hotNum'>{{index+1}}</text>
+        <text class='hotName'>{{item.title}}</text>
+    </view>
+</view>
+
+<!-- 搜索结果块 -->
+<view  wx:if="{{showResult}}" class='hotSearchContainer'>
+    <text class='hotTitle'>搜索结果</text>
+    <view class='movieContainer' wx:for="{{searchResult}}" wx:key="{{item.id}}" data-id='{{item.id}}' bindtap="openMovieDetail">
+        <view class='movieItem'>
+            <image class='movieImg' src='{{item.images.medium}}' lazy-load />
+            <view class='movieIntroduce'>
+                <text class='itemTitle'>{{item.title}}</text>
+                <view class='gradeContainer'>
+                    <image class='gradeImg' src='./../images/i_grade_foc.png' wx:for="{{format.integer(item.rating.average)}}" wx:key="{{index}}" />
+                    <image class='gradeImg' src='./../images/i_grade.png' wx:for="{{format.decimals(item.rating.average)}}" wx:key="{{index}}" />
+                    <text class='gradeNum'>{{format.toFix(item.rating.average, 1)}}</text>
+                </view>
+                <text class='director'>导演:  {{format.names(item.directors)}}</text>
+                <text class='cast'>主演:  {{format.names(item.casts)}}</text>
+            </view>
+        </view>
+    </view>
+    <view wx:if='{{loading}}'>
+        <image src='./../images/i_loading.gif' class='loadingImg' />
+    </view>
+</view>
