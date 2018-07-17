@@ -1,5 +1,5 @@
 # OrangeMovie
-这是一个仿豆瓣电影APP的微信小程序.
+橙子电影提供时下新奇、热门、好玩的电影资讯.
 
 ## 热映：
 ![Image text](https://github.com/h406621397/ImageRepository/blob/master/IMG_1089.PNG)

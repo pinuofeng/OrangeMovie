@@ -16,7 +16,7 @@ function getLocation() {
 // 根据经纬度获取详细位置信息
 function loadCity(longitude, latitude) {
     wx.request({
-        url: `https://api.map.baidu.com/geocoder/v2/?ak=ZoDAfZ1Ul7G74Myw8g8mLSPlfcVeBAel&location=${latitude},${longitude}&output=json`,
+        url: `https://api.map.baidu.com/geocoder/v2/?ak=&location=${latitude},${longitude}&output=json`,
         method: 'GET',
         header: {
             'Content-Type': 'application/json'
@@ -31,8 +31,8 @@ function loadCity(longitude, latitude) {
 App({
     globalData: {
         baseURL: 'https://api.douban.com',
-        apiKey: '0b2bdeda43b5688921839c8ecb20399b',
-        bMapKey: 'ZoDAfZ1Ul7G74Myw8g8mLSPlfcVeBAel'
+        apiKey: '',
+        bMapKey: ''
     },
     onLaunch: function() {
         // 获取定位信息
