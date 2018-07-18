@@ -36,7 +36,6 @@ Page({
                 'Content-Type': 'application/x-www-form-urlencoded'
             },
             success: function (res) {
-                console.log(res.data);
                 _this.setData({
                     movies: [..._this.data.movies, ...res.data.subjects]
                 });
@@ -54,7 +53,7 @@ Page({
      * 生命周期函数--监听页面初次渲染完成
      */
     onReady: function () {
-
+        
     },
 
     /**
