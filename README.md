@@ -1,5 +1,5 @@
 # OrangeMovie
-橙子电影提供时下新奇、热门、好玩的电影资讯.
+橙子电影
 
 ## 热映：
 ![Image text](https://github.com/h406621397/ImageRepository/blob/master/IMG_1089.PNG)
@@ -27,7 +27,14 @@
 ![Image text](https://github.com/h406621397/ImageRepository/blob/master/IMG_1095.PNG)
 
 
-# 项目介绍：
-1、该项目使用的是微信小程序原生框架编写，没使用mpVue之类的框架<br>
-2、完成了热映、找片、排行、电影详情页面，后续考虑添加影人、预告片播放页面<br>
-3、小程序已提交审核<br>
+## 项目介绍：
+1、该项目使用的是微信小程序原生框架编写，没使用mpvue之类的框架<br>
+2、完成了热映、找片、排行、电影详情页面<br>
+
+
+## 小程序审核最后没通过
+
+![Image text](https://github.com/h406621397/ImageRepository/blob/master/3333333.png)
+
+挺可惜的，电影类的小程序个人开发者不能做，只有企业注册的小程序号才能做。<br>
+边学边做花了2个星期做的小程序不能上线，有点可惜了...不过重在学习，也值了。
